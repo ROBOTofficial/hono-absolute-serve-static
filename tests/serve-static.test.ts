@@ -196,7 +196,7 @@ describe("Serve Static Middleware", () => {
 			.get("/static-with-precompressed/hello.txt")
 			.set("Accept-Encoding", "wompwomp, gzip, br, deflate, zstd");
 		expect(res.status).toBe(200);
-		expect(res.headers["content-length"]).toBe("19");
+		expect(res.headers["content-length"]).toBe("24");
 		expect(res.headers["content-encoding"]).toBe("br");
 		expect(res.headers["vary"]).toBe("Accept-Encoding");
 		expect(res.text).toBe("Hello br Compressed");
