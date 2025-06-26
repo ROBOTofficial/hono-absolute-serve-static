@@ -57,7 +57,9 @@ const getStats = (path: string) => {
 	return stats;
 };
 
-export const serveStatic = (options: ServeStaticOptions = { root: "" }): MiddlewareHandler => {
+export const serveStaticWithAbsolutePath = (
+	options: ServeStaticOptions = { root: "" }
+): MiddlewareHandler => {
 	return async (c, next) => {
 		// Do nothing if Response is already set
 		if (c.finalized) {
