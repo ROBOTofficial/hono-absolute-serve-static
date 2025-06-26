@@ -1,0 +1,29 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Debug",
+			"runtimeExecutable": "node",
+			"runtimeArgs": ["--nolazy", "--import", "tsx/esm"],
+			"args": ["src/index.ts"],
+			"cwd": "${workspaceRoot}",
+			"envFile": "${workspaceFolder}/.env",
+			"internalConsoleOptions": "openOnSessionStart",
+			"skipFiles": ["<node_internals>/**", "node_modules/**"]
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Debug With Terminal",
+			"runtimeExecutable": "node",
+			"runtimeArgs": ["--nolazy", "--import", "tsx/esm"],
+			"args": ["src/index.ts"],
+			"cwd": "${workspaceRoot}",
+			"envFile": "${workspaceFolder}/.env",
+			"skipFiles": ["<node_internals>/**", "node_modules/**"],
+			"console": "integratedTerminal"
+		}
+	]
+}

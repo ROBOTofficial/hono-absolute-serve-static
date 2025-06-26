@@ -1,0 +1,43 @@
+{
+	"name": "typescript-lib-template",
+	"main": "dist/index.cjs",
+	"module": "dist/index.js",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"start": "bun run src/index.ts",
+		"test": "jest",
+		"build": "tsup",
+		"format": "prettier --write .",
+		"lint": "prettier --check . && eslint .",
+		"check": "tsc --noEmit",
+		"changesets": "npx @changesets/cli"
+	},
+	"devDependencies": {
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"@changesets/cli": "^2.29.4",
+		"@eslint/compat": "^1.2.9",
+		"@eslint/js": "^9.26.0",
+		"@jest/globals": "^30.0.0",
+		"@jest/types": "^30.0.0",
+		"@types/jest": "^29.5.14",
+		"@types/node": "^24.0.1",
+		"bun": "^1.2.13",
+		"eslint": "^9.26.0",
+		"eslint-config-prettier": "^10.1.5",
+		"globals": "^16.1.0",
+		"jest": "^30.0.0",
+		"prettier": "^3.5.3",
+		"ts-jest": "^29.4.0",
+		"tsup": "^8.5.0",
+		"typescript-eslint": "^8.32.0"
+	},
+	"engines": {
+		"node": ">=18.20.8"
+	}
+}
