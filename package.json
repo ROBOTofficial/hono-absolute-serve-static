@@ -1,5 +1,5 @@
 {
-	"name": "typescript-lib-template",
+	"name": "hono-absolute-serve-static",
 	"main": "dist/index.cjs",
 	"module": "dist/index.js",
 	"type": "module",
