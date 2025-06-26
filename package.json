@@ -40,6 +40,7 @@
 		"@jest/types": "^30.0.0",
 		"@types/jest": "^29.5.14",
 		"@types/node": "^24.0.1",
+		"@types/supertest": "^6.0.3",
 		"bun": "^1.2.13",
 		"eslint": "^9.26.0",
 		"eslint-config-prettier": "^10.1.5",
@@ -47,6 +48,7 @@
 		"hono": "^4.8.3",
 		"jest": "^30.0.0",
 		"prettier": "^3.5.3",
+		"supertest": "^7.1.1",
 		"ts-jest": "^29.4.0",
 		"tsup": "^8.5.0",
 		"typescript-eslint": "^8.32.0"
