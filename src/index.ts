@@ -47,10 +47,6 @@ const createStreamBody = (stream: ReadStream) => {
 	return body;
 };
 
-const addCurrentDirPrefix = (path: string) => {
-	return `./${path}`;
-};
-
 const getStats = (path: string) => {
 	let stats: Stats | undefined;
 	try {
@@ -82,9 +78,7 @@ export const serveStatic = (options: ServeStaticOptions = { root: "" }): Middlew
 			root: options.root
 		});
 
-		if (path) {
-			path = addCurrentDirPrefix(path);
-		} else {
+		if (!path) {
 			return next();
 		}
 
@@ -97,9 +91,7 @@ export const serveStatic = (options: ServeStaticOptions = { root: "" }): Middlew
 				defaultDocument: options.index ?? "index.html"
 			});
 
-			if (path) {
-				path = addCurrentDirPrefix(path);
-			} else {
+			if (!path) {
 				return next();
 			}
 
