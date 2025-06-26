@@ -21,6 +21,10 @@
 		"type": "git",
 		"url": "https://github.com/ROBOTofficial/hono-absolute-serve-static.git"
 	},
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org",
+		"access": "public"
+	},
 	"devDependencies": {
 		"@types/bun": "latest"
 	},
