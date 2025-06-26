@@ -1,3 +1,10 @@
+/**
+ * --------------------------
+ * Respect: @hono/node-server
+ * https://github.com/honojs/node-server
+ * --------------------------
+ */
+
 import { getFilePath, getFilePathWithoutDefaultDocument } from "hono/utils/filepath";
 import { getMimeType } from "hono/utils/mime";
 import { createReadStream, lstatSync } from "node:fs";
