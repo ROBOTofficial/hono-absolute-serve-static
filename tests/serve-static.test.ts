@@ -4,6 +4,10 @@ import { join } from "node:path";
 import { serveStaticWithAbsolutePath } from "../src/index";
 import { createAdaptorServer } from "@hono/node-server";
 
+function text(str: string) {
+	return str + "\n";
+}
+
 describe("Serve Static Middleware", () => {
 	const app = new Hono();
 
@@ -52,7 +56,7 @@ describe("Serve Static Middleware", () => {
 	it("Should return index.html", async () => {
 		const res = await request(server).get("/static/");
 		expect(res.status).toBe(200);
-		expect(res.text).toBe("<h1>Hello Hono</h1>");
+		expect(res.text).toBe(text("<h1>Hello Hono</h1>"));
 		expect(res.headers["content-type"]).toBe("text/html; charset=utf-8");
 		expect(res.headers["x-custom"]).toBe("Found the file at ./test/assets/static/index.html");
 	});
@@ -60,7 +64,7 @@ describe("Serve Static Middleware", () => {
 	it("Should return hono.html", async () => {
 		const res = await request(server).get("/static/hono.html");
 		expect(res.status).toBe(200);
-		expect(res.text).toBe("<h1>This is Hono.html</h1>");
+		expect(res.text).toBe(text("<h1>This is Hono.html</h1>"));
 		expect(res.headers["content-type"]).toBe("text/html; charset=utf-8");
 	});
 
