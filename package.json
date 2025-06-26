@@ -13,7 +13,8 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
 		"check": "tsc --noEmit",
-		"changesets": "npx @changesets/cli"
+		"changesets": "npx @changesets/cli",
+		"prepublish": "bun run build"
 	},
 	"files": [
 		"dist"
