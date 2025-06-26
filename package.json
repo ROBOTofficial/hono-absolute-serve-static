@@ -4,6 +4,7 @@
 	"module": "dist/index.js",
 	"type": "module",
 	"version": "0.0.1",
+	"homepage": "https://github.com/ROBOTofficial/hono-absolute-serve-static",
 	"scripts": {
 		"start": "bun run src/index.ts",
 		"test": "jest",
@@ -12,6 +13,13 @@
 		"lint": "prettier --check . && eslint .",
 		"check": "tsc --noEmit",
 		"changesets": "npx @changesets/cli"
+	},
+	"files": [
+		"dist"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ROBOTofficial/hono-absolute-serve-static.git"
 	},
 	"devDependencies": {
 		"@types/bun": "latest"
