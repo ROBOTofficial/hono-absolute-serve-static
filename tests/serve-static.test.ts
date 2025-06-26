@@ -58,7 +58,9 @@ describe("Serve Static Middleware", () => {
 		expect(res.status).toBe(200);
 		expect(res.text).toBe(text("<h1>Hello Hono</h1>"));
 		expect(res.headers["content-type"]).toBe("text/html; charset=utf-8");
-		expect(res.headers["x-custom"]).toBe("Found the file at ./test/assets/static/index.html");
+		expect(res.headers["x-custom"]).toBe(
+			`Found the file at ${join(__dirname, "./assets")}/static/index.html`
+		);
 	});
 
 	it("Should return hono.html", async () => {
@@ -151,7 +153,7 @@ describe("Serve Static Middleware", () => {
 		const res = await request(server).get("/on-not-found/foo.txt");
 		expect(res.status).toBe(404);
 		expect(notFoundMessage).toBe(
-			"./not-found/on-not-found/foo.txt is not found, request to /on-not-found/foo.txt"
+			`${join(__dirname, "./not-found")}/on-not-found/foo.txt is not found, request to /on-not-found/foo.txt`
 		);
 	});
 
