@@ -4,6 +4,7 @@
 	"module": "dist/index.js",
 	"type": "module",
 	"version": "0.0.1",
+	"license": "MIT",
 	"homepage": "https://github.com/ROBOTofficial/hono-absolute-serve-static",
 	"scripts": {
 		"start": "bun run src/index.ts",
