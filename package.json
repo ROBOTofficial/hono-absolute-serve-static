@@ -18,6 +18,12 @@
 		"changesets": "npx @changesets/cli",
 		"prepublish": "bun run build"
 	},
+	"keywords": [
+		"hono",
+		"absolute path",
+		"serveStatic",
+		"@hono/node-server"
+	],
 	"files": [
 		"dist"
 	],
