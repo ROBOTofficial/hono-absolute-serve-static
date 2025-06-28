@@ -1,7 +1,9 @@
 {
 	"name": "hono-absolute-serve-static",
+	"description": "Absolute path version of @hono/node-server.",
 	"main": "dist/index.cjs",
 	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"type": "module",
 	"version": "0.0.1",
 	"license": "MIT",
@@ -16,6 +18,12 @@
 		"changesets": "npx @changesets/cli",
 		"prepublish": "bun run build"
 	},
+	"keywords": [
+		"hono",
+		"absolute path",
+		"serveStatic",
+		"@hono/node-server"
+	],
 	"files": [
 		"dist"
 	],
