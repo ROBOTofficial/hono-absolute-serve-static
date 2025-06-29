@@ -39,7 +39,12 @@ jobs:
   npm:
     name: Release (NPM)
 
+    permissions:
+      contents: read
+      id-token: write
+
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
