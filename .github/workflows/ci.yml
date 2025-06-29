@@ -5,25 +5,40 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  pull-requests: read
+
 jobs:
   ci:
     name: CI
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node: ["20.x", "22.x", "24.x"]
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Set up Node.js (v${{ matrix.node }})
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: ${{ matrix.node }}
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
 
       - name: Install Dependencies
-        run: npm install
+        run: bun install
 
       - name: Lint Check
-        run: npm run lint
+        run: bun run lint
 
       - name: Type Check
-        run: npm run check
+        run: bun run check
+
+      - name: Build Check
+        run: bun run build
