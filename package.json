@@ -9,7 +9,6 @@
 	"license": "MIT",
 	"homepage": "https://github.com/ROBOTofficial/hono-absolute-serve-static",
 	"scripts": {
-		"start": "bun run src/index.ts",
 		"test": "jest",
 		"build": "tsup",
 		"format": "prettier --write .",
