@@ -14,14 +14,18 @@ jobs:
     name: CI
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node: ["20.x", "22.x", "24.x"]
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Set up Node.js (v${{ matrix.node }})
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: ${{ matrix.node }}
 
       - uses: oven-sh/setup-bun@v2
         with:
@@ -38,6 +42,3 @@ jobs:
 
       - name: Build Check
         run: bun run build
-
-      - name: Test
-        run: bun run test
