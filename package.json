@@ -16,7 +16,7 @@
 		"lint": "prettier --check . && eslint .",
 		"check": "tsc --noEmit",
 		"changesets": "npx @changesets/cli",
-		"prepublish": "bun run build"
+		"prepublishOnly": "bun run build"
 	},
 	"keywords": [
 		"hono",

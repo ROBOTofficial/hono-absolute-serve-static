@@ -1,4 +1,4 @@
-# `serveStaticWithAbsolute`
+# `serveStaticWithAbsolutePath`
 
 Absolute path version of @hono/node-server.
 
